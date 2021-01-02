@@ -42,7 +42,7 @@ app.use(function (err, req, res, next) {
 });
 
 mongoose
-  .connect("", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect("mongodb+srv://moeed:moeed@cluster0.1ve4x.mongodb.net/moeed?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to Mongo...."))
   .catch((error) => console.log(error.message));
 module.exports = app;
