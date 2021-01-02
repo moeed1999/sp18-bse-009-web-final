@@ -1,0 +1,28 @@
+extends ../layout
+
+block content 
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/products/add", class="btn btn-success float-right" , id="i") Add New Product
+    table.table
+            thead
+                tr
+                    th ID
+                    th Name
+                    th Price
+                    th Category
+                    th Details
+                    
+
+            tbody
+                each product in products
+                    tr
+                        td=product.id
+                        td=product.name
+                        td=product.price
+                        td=product.category
+                        td=product.details
+                        
+                           
